@@ -50,7 +50,7 @@ export default function Home() {
   const [summary, setSummary] = useState("");
   return <>
     <a className="skip" href="#conteudo">Ir ao conteúdo</a>
-    <header className="frame nav"><a className="logo" href="#conteudo">Lume <i>à</i> Mesa<span>.</span></a><nav aria-label="Principal"><a href="#cozinha">Cozinha</a><a href="#menu">Menu</a><a className="nav-cta" href="#mesa">Sua mesa</a></nav></header>
+    <header className="frame nav"><a className="logo brand-masthead" href="#conteudo"><img className="brand-image" src={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/brand-lockup.webp"} alt="Lume à Mesa" width="640" height="160" decoding="async" /></a><nav aria-label="Principal"><a href="#cozinha">Cozinha</a><a href="#menu">Menu</a><a className="nav-cta" href="#mesa">Sua mesa</a></nav></header>
     <main id="conteudo" tabIndex={-1}>
       <section className="frame hero">
         <div className="hero-copy"><p className="eyebrow">Cozinha de origem <span>•</span> Projeto conceitual</p><h1>Comida feita<br/>no tempo<br/><em>do fogo.</em></h1><p className="lead">Ingredientes da estação, preparo na brasa e mesa posta para conversar sem pressa.</p><div className="callouts"><a className="button" href="#menu">Montar minha degustação</a><a className="soft-link" href="#mesa">Simular uma mesa</a></div><p className="hero-note">Menu à la carte · Valores visíveis antes de escolher</p></div>
@@ -92,6 +92,6 @@ export default function Home() {
         </form>
       </section>
     </main>
-    <footer className="frame"><span>Lume à Mesa.</span><p>Projeto conceitual de portfólio. Restaurante, menu e valores fictícios.</p><a href="https://toledo-felipe.vercel.app/portfolio">Portfólio de Toledo</a></footer>
+    <footer className="frame"><img className="brand-image brand-footer" src={(process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/brand-lockup.webp"} alt="Lume à Mesa" width="640" height="160" decoding="async" /><p>Projeto conceitual de portfólio. Restaurante, menu e valores fictícios.</p><a href="https://toledo-felipe.vercel.app/portfolio">Portfólio de Toledo</a></footer>
   </>;
 }
